@@ -1,0 +1,29 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Picky{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Default Header{% endblock %}</h1>
+
+        {% block links %}
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">contact</a>
+            <a href="/restaurant_list">Restaurants List</a>        
+        {% endblock %}
+    </header>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>{% block footer %}Default Footer{% endblock %}</p>
+    </footer>
+</body>
+</html>

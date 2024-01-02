@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{restaurant.name}}{% endblock %}
+
+{% block header %}Welcome to the Detail Page of  {{restaurant.name}}{% endblock %}
+
+{% block content %}
+    <ul>
+        <p>This is the content of the {{restaurant}} Page.</p>
+        <p>Location: {{ restaurant.location }}</p>
+        <p>Category: {{ restaurant.category }}</p>
+    </ul>
+    <a href="{% url 'restaurant_list' %}">Back to List</a>
+{% endblock %}
+
+{% block footer %}Custom Footer for Restaurants Page{% endblock %}

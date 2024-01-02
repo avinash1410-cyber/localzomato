@@ -1,0 +1,13 @@
+<!-- restaurant_add.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add a New Item</h2>
+  <form method="post" action="{% url 'add_item' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

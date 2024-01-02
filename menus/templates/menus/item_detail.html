@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{item.name}}{% endblock %}
+
+{% block header %}Welcome to the Detail Page of  {{item.name}}{% endblock %}
+
+{% block content %}
+    <ul>
+        <p>This is the content of the {{restaurant}} Page.</p>
+        <p>Location: {{ item.user }}</p>
+        <p>Category: {{ item.content }}</p>
+    </ul>
+    <a href="{% url 'item_list' %}">Back to List</a>
+{% endblock %}
+
+{% block footer %}Custom Footer for Item Page{% endblock %}

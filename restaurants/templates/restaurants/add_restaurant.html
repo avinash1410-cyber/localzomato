@@ -1,0 +1,20 @@
+<!-- restaurant_add.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add a New Restaurant</h2>
+  <form method="post" action="{% url 'add_restaurant' %}">
+    {% csrf_token %}
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="id_location">Location:</label>
+    <input type="text" name="location" required>
+    <br>
+    <label for="id_category">Category:</label>
+    <input type="text" name="category" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

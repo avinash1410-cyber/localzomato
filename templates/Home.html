@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}Welcome to the Home{% endblock %}
+
+
+{% block links %}
+    <a href="{% url 'restaurant_list' slug='Veg' %}">Veg Restaurants</a>
+    <a href="{% url 'restaurant_list' slug='NonVeg' %}">Non Veg Restaurants</a>
+    <a href="{% url 'restaurant_list' slug='Both' %}">Both Restaurants</a>
+{% endblock %}
+
+
+
+
+{% block content %}
+    <p>This is the content of the Home Page.</p>
+    <ul>
+
+
+        {% for name in members %}
+            <li>{{name}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block footer %}Custom Footer for Home Page{% endblock %}
